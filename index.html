@@ -6,6 +6,8 @@
   <script type="text/javascript" src="bundle.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116906449-1"></script>
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script src="https://cdn.rawgit.com/ics-creative/ParticleJS/release/0.1.2/libs/particlejs.min.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -14,7 +16,7 @@
     gtag('config', 'UA-116906449-1');
   </script>
   <style>
-    /* @font-face {
+    @font-face {
       font-family: 'Noto Sans Japanese';
       font-style: normal;
       font-weight: 500;
@@ -23,19 +25,22 @@
     }
     body {
       font-family: 'Noto Sans Japanese', sans-serif;
-    } */
+    }
   </style>
 </head>
 
 <body>
+  <!-- <canvas width="960" height="540" id="myCanvas"></canvas> -->
+  <div class="bg"></div>
   <div id="back" class="back-btn"></div>
   <div id="next" class="next-btn"></div>
-  <div id="panel" class="panel"></div>
+  <!-- <div id="panel" class="panel"></div> -->
   <div class="stage">
     <div id="cube" class="cube">
       <div class="front">
         <div id="front">
-          <h1>鹿児島大学<br>アプリ開発サークル</h1>
+
+          <h2>鹿児島大学<br>アプリ開発サークル</h2>
           <br>
           <p style="font-weight: 100;" >2018年から活動開始しました。</p>
           <p>ユーティリティアプリからクソゲーまで</p>
