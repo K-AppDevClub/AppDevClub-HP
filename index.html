@@ -16,7 +16,7 @@
     gtag('config', 'UA-116906449-1');
   </script>
   <style>
-    @font-face {
+    /* @font-face {
       font-family: 'Noto Sans Japanese';
       font-style: normal;
       font-weight: 500;
@@ -25,12 +25,14 @@
     }
     body {
       font-family: 'Noto Sans Japanese', sans-serif;
-    }
+    } */
   </style>
 </head>
 
 <body>
-  <!-- <canvas width="960" height="540" id="myCanvas"></canvas> -->
+  <div id="canvas-container">
+    <canvas width="960" height="540" id="myCanvas"></canvas>
+  </div>
   <div class="bg"></div>
   <div id="back" class="back-btn"></div>
   <div id="next" class="next-btn"></div>
@@ -40,7 +42,8 @@
       <div class="front">
         <div id="front">
 
-          <h2>鹿児島大学<br>アプリ開発サークル</h2>
+          <h1 id="myText">Kagoshima Univ.<br>App Dev Club</h1>
+          <h4>鹿児島大学アプリ開発サークル</h4>
           <br>
           <p style="font-weight: 100;" >2018年から活動開始しました。</p>
           <p>ユーティリティアプリからクソゲーまで</p>
@@ -49,21 +52,25 @@
           <p>初心者大歓迎！！</p>
         </div>
       </div>
+
       <div class="right">
         <div id="right">
           <h1>活動内容</h1>
         </div>
       </div>
+
       <div class="back">
         <div id="backk">
           <h1>メンバー</h1>
         </div>
       </div>
+
       <div class="left">
         <div id="left">
           <h1>参加しよう</h1>
         </div>
       </div>
+
     </div>
   </div>
 </body>

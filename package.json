@@ -16,7 +16,9 @@
   "name": "yt-story",
   "version": "1.0.0",
   "main": "fiddle.js",
-  "dependencies": {},
+  "dependencies": {
+    "shuffle-text": "^0.2.6"
+  },
   "author": "",
   "license": "ISC",
   "description": ""
