@@ -18,6 +18,9 @@ p {
   opacity: 0.8;
   animation: huerotator 15s infinite alternate;
 }
+.page {
+  padding-top: 20px;
+}
 .nav-arrow {
   width: 30px;
 }
@@ -110,7 +113,7 @@ div.stage{
     -webkit-transform-style:preserve-3d;
     -webkit-transition:all .5s;
     // top: -10px;
-    left: 4px;
+    left: 6px;
     box-sizing: border-box;
     div{
       width: $size;
