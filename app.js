@@ -66,6 +66,7 @@ onload=function(){
     current = current.next;
     current.el.classList.remove('fadeOutBlur');
     current.el.classList.add('fadeInBlur');
+    scrollTo( 0,0 );
     cube.style.webkitTransform = "rotateY("+ angle +"deg)";
   };
 
@@ -77,6 +78,7 @@ onload=function(){
     current = current.prev;
     current.el.classList.remove('fadeOutBlur');
     current.el.classList.add('fadeInBlur');
+    scrollTo( 0,0 );
     cube.style.webkitTransform = "rotateY("+ angle +"deg)";
   };
 }

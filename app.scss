@@ -14,9 +14,12 @@ p {
   z-index: -1;
   width: 102vw;
   height: 152vh;
-  background: linear-gradient(to bottom, #729401 0%, #af2a37 100%);
+  background: linear-gradient(to bottom, #719202 0%, #9c1220 100%);
   opacity: 0.8;
   animation: huerotator 15s infinite alternate;
+}
+.nav-arrow {
+  width: 30px;
 }
 @keyframes huerotator {
   0% {
@@ -55,6 +58,14 @@ p {
   width: 20vw;
   height: 100vh;
   z-index: 2;
+  display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  // background-color: blue;
 }
 div.next-btn{
   @include ctrl-btn;
@@ -63,6 +74,21 @@ div.next-btn{
 div.back-btn{
   @include ctrl-btn;
   left: 0;
+}
+.btn {
+  width: 100px;
+  height: 50px;
+  font-size: 1.5em;
+  font-weight: 200;
+  outline: none;
+  color: #fff;
+  background-color: rgba(0,0,0,0);
+  border-radius: 2px;
+  border: 1px #fff solid;
+  -webkit-transition:all .5s;
+  &:hover {
+    background-color: rgb(155, 49, 49);
+  }
 }
 
 #canvas-container {
