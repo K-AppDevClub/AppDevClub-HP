@@ -1,6 +1,22 @@
 require('./app.scss')
 import ShuffleText from 'shuffle-text';
 
+var front = { el: null, next: null, prev: null };
+var right = { el: null, next: null, prev: null };
+var back =  { el: null, next: null, prev: null };
+var left =  { el: null, next: null, prev: null };
+let page_num = 0;
+let current = front;
+
+front.next = right;
+front.prev = left;
+right.next = back;
+right.prev = front;
+back.next  = left;
+back.prev  = right;
+left.next  = front;
+left.prev  = back;
+
 const resizeCanvas = function(){
   let container = document.getElementById('canvas-container');
   let canvas = document.getElementById('myCanvas');
@@ -8,14 +24,17 @@ const resizeCanvas = function(){
   canvas.height = container.clientHeight; 
 }
 
-let page_num = 0;
-
 onload=function(){
   let angle = 0;
   const cube = document.getElementById("cube");
-  const el = document.getElementById("front");
-  const text = new ShuffleText(el);
-  text.start();
+
+  front.el   = document.getElementById("front");
+  right.el   = document.getElementById("right");
+  left.el    = document.getElementById("left");
+  back.el    = document.getElementById("backk");
+  current.el.classList.add('fadeInBlur');
+  // const text = new ShuffleText(front);
+  // text.start();
   resizeCanvas();
 
   const stage = new createjs.Stage("myCanvas");
@@ -34,7 +53,6 @@ onload=function(){
     stage.update();
   }
 
-
   // Event listners
   window.addEventListener('resize', function (event) {
     resizeCanvas();
@@ -43,12 +61,22 @@ onload=function(){
   document.getElementById("next").onclick = function() {
     page_num += 1;
     angle -= 90;
+    current.el.classList.remove('fadeInBlur');
+    current.el.classList.add('fadeOutBlur');
+    current = current.next;
+    current.el.classList.remove('fadeOutBlur');
+    current.el.classList.add('fadeInBlur');
     cube.style.webkitTransform = "rotateY("+ angle +"deg)";
   };
 
   document.getElementById("back").onclick = function() {
     page_num -= 1;
     angle += 90;
+    current.el.classList.remove('fadeInBlur');
+    current.el.classList.add('fadeOutBlur');
+    current = current.prev;
+    current.el.classList.remove('fadeOutBlur');
+    current.el.classList.add('fadeInBlur');
     cube.style.webkitTransform = "rotateY("+ angle +"deg)";
   };
 }

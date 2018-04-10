@@ -13,9 +13,9 @@ p {
   left: 0;
   z-index: -1;
   width: 102vw;
-  height: 102vh;
-  background: linear-gradient(to bottom, #617e01 0%, #7e212a 100%);
-  opacity: 0.5;
+  height: 152vh;
+  background: linear-gradient(to bottom, #729401 0%, #af2a37 100%);
+  opacity: 0.8;
   animation: huerotator 15s infinite alternate;
 }
 @keyframes huerotator {
@@ -28,6 +28,25 @@ p {
     -webkit-filter: hue-rotate(360deg);
     filter: hue-rotate(360deg);
   }
+}
+
+.fadeInBlur {
+  opacity: 1.0;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+  -webkit-transition:all .5s;
+}
+.fadeOutBlur {
+  opacity: 0.0;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-transition:all .5s;
 }
 
 @mixin ctrl-btn{
@@ -63,7 +82,7 @@ div.stage{
     height: 100vh;
     position: relative;
     -webkit-transform-style:preserve-3d;
-    -webkit-transition:all 0.5s;
+    -webkit-transition:all .5s;
     // top: -10px;
     left: 4px;
     box-sizing: border-box;
@@ -85,11 +104,11 @@ div.stage{
       top: 0;
       left: 0;
       -webkit-transform: translateZ($size/2);
+      -webkit-transition:all 5.5s;
     }
     div.back{
       top: 0;
       left: 0;
-      opacity: 0.2;
       -webkit-transform: translateZ(-$size/2) rotateY(180deg);
     }
     div.left{
