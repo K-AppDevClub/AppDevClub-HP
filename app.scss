@@ -94,6 +94,19 @@ div.back-btn{
   }
 }
 
+.logo-image {
+  width:25%; 
+  max-width:150px;
+  margin: 10px;
+}
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+}
+
 #canvas-container {
   width: 100vw;
   height: 100vh;
@@ -115,37 +128,47 @@ div.stage{
     // top: -10px;
     left: 6px;
     box-sizing: border-box;
-    div{
+    div.front{
       width: $size;
       height: 100vh;
       box-sizing: border-box;
       text-align: center;
       position: absolute;
       z-index: -2;
-      // -webkit-filter: blur(5px);
-      // -moz-filter: blur(5px);
-      // -o-filter: blur(5px);
-      // -ms-filter: blur(5px);
-      // filter: blur(5px);
-      // background-color: rgba(240,240,240,.2);
-    }
-    div.front{
       top: 0;
       left: 0;
       -webkit-transform: translateZ($size/2);
       -webkit-transition:all 5.5s;
     }
     div.back{
+      width: $size;
+      height: 100vh;
+      box-sizing: border-box;
+      text-align: center;
+      position: absolute;
+      z-index: -2;
       top: 0;
       left: 0;
       -webkit-transform: translateZ(-$size/2) rotateY(180deg);
     }
     div.left{
+      width: $size;
+      height: 100vh;
+      box-sizing: border-box;
+      text-align: center;
+      position: absolute;
+      z-index: -2;
       top: 0;
       right: $size/2;
       -webkit-transform:rotateY(-90deg);
     }
     div.right{
+      width: $size;
+      height: 100vh;
+      box-sizing: border-box;
+      text-align: center;
+      position: absolute;
+      z-index: -2;
       top: 0;
       left: $size/2;
       -webkit-transform:rotateY(90deg);
