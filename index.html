@@ -28,32 +28,13 @@
 
     gtag('config', 'UA-116906449-1');
   </script>
-  <style>
-    @font-face {
-      font-family: 'Noto Sans Japanese';
-      font-style: normal;
-      font-weight: 500;
-      /* src: url(./fonts/NotoSansCJKjp-Thin.woff2) format('woff2'), */
-      src: url(./fonts/NotoSans_medium.woff) format('woff'),
-          url(./fonts/NotoSans_medium.otf)  format('opentype');
-    }
-    @font-face {
-      font-family: 'Noto Sans Japanese';
-      font-style: normal;
-      font-weight: 200;
-      src: url(./fonts/NotoSansCJKjp-Light.min.woff2) format('woff2');
-    }
-    body {
-      font-family: 'Noto Sans Japanese', sans-serif;
-    }
-  </style>
 </head>
 
 <body>
   <div id="canvas-container">
     <canvas width="960" height="540" id="myCanvas"></canvas>
   </div>
-  <div class="bg"></div>
+  <div id="bg" class="bg"></div>
   <div id="back" class="back-btn">
     <img class="nav-arrow" src="./images/angle-left.svg"/>
   </div>
@@ -81,8 +62,61 @@
       </div>
 
       <div class="right">
-        <div id="right" class="page fadeOutBlur">
-          <h1>目的</h1>
+        <div id="right" class="page fadeOutBlur hiddenPage">
+          <h1>活動内容</h1>
+          <br>
+          <p>週1で集まって勉強会やアイデアソンを開催！</p>
+          <p>初心者でもアプリを作れるようにサポート！</p>
+          <br>
+          <p>チームを組んでアプリを作るもよし！</p>
+          <p>ハッカソンなどのイベントに出るもよし！</p>
+          <p>何をするのも自由です！</p>
+          <br>
+          <p>鹿大生、他大学生問いません！</p>
+          <p>興味のある方はどなたでも参加可能です！</p>
+
+          <br>
+          <h1>メンバー</h1>
+          <br>
+          <div class="profile-container">
+            <div class="profile-item-left">
+              <img style="width:100%;" src="./images/marukome-icon.jpg"/>
+            </div>
+            <div class="profile-item-right">
+              <p style="font-size: 25px; font-weight: 500; margin: 0;">代表 持田</p>
+              <p>理工学系研究科 情報生体システム工学専攻2年</p>
+              <a href="https://twitter.com/Ka2Robo"><img style="width:30px;" src="./images/twitter.svg"/> </a>
+              <a href="https://github.com/okomeee"><img style="width: 30px;" src="./images/iconmonstr-github-1.svg"/> </a>
+            </div>
+          </div>
+          <br>
+          <div class="profile-container">
+            <div class="profile-item-left">
+              <img style="width:100%;" src="./images/ehama-icon.jpg"/>
+            </div>
+            <div class="profile-item-right">
+              <p style="font-size: 25px; font-weight: 500; margin: 0;">会計 江浜</p>
+              <p>理工学系研究科 情報生体システム工学専攻2年</p>
+              <a href="https://twitter.com/hamahosi"><img style="width: 30px;" src="./images/twitter.svg"/> </a>
+              <a href="https://github.com/hoshinari"><img style="width: 30px;" src="./images/iconmonstr-github-1.svg"/> </a> 
+            </div>
+          </div>
+          <br>
+          <br>
+          <h1>サポートメンバー</h1>
+          <br>
+          <div class="profile-container">
+            <div class="profile-item-left">
+              <img style="width:100%;" src="./images/matsuo.jpg"/>
+            </div>
+            <div class="profile-item-right">
+              <p style="font-size: 25px; font-weight: 500; margin: 0;">松尾</p>
+              <a href="https://twitter.com/gakutomo"><img style="width:30px;" src="./images/twitter.svg"/> </a>
+              <a href="https://github.com/gacktomo"><img style="width: 30px;" src="./images/iconmonstr-github-1.svg"/> </a>
+            </div>
+          </div>
+          <br>
+          <!--
           <div class="logo-container">
             <img class="logo-image" src="https://d21ii91i3y6o6h.cloudfront.net/gallery_images/from_proof/1848/medium/1408458528/ruby-on-rails.png"/>
             <img class="logo-image" src="https://cdn-ak.f.st-hatena.com/images/fotolife/f/fjct/20171019/20171019081453.png"/>
@@ -97,42 +131,45 @@
           <p>ReactやVueを使ったハイブリッドアプリ</p>
           <p>ブロックチェーンやAIなどの</p>
           <p>最新技術まで幅広く挑戦します</p>
+          -->
         </div>
       </div>
 
       <div class="back">
-        <div id="backk" class="page fadeOutBlur">
+        <div id="backk" class="page fadeOutBlur hiddenPage">
           <!-- <img style="width:100%" src="http://78.media.tumblr.com/abdb209f1ba6f7729636d5ac4e3a6d47/tumblr_nqx8yumAGD1tubinno1_1280.jpg"/> -->
           <!-- <img style="width:80%" src="http://78.media.tumblr.com/ac9d3c7eeed9e7271efe5e0d9b88ae2d/tumblr_nqx8chHbKD1tubinno1_1280.jpg"/> -->
-          <h1>活動内容</h1>
           <br>
-          <p>週1で集まって勉強会やアイデアソンを開催！</p>
-          <p>初心者でもアプリを作れるようにサポート！</p>
+          <h1>活動実績</h1>
+          <p> 2018年6月 SPAJAM 福岡予選 優秀賞 </p>
+          <p> <span>2018年10月 JPHACKS2018</span> <span style="display: inline-block;">ローカルスポンサー賞</span> </p>
+          <div class="picture-container">
+            <img class ="picture-image" src="./images/sample3.jpg">
+            <img class ="picture-image" src="./images/sample2.jpg">
+            <img class ="picture-image" src="./images/sample1.jpg">
+            <img class ="picture-image" src="./images/sample4.jpg">
+          </div>
           <br>
-          <p>チームを組んでアプリを作るもよし！</p>
-          <p>ハッカソンなどのイベントに出るもよし！</p>
-          <p>何をするのも自由です！</p>
           <br>
-          <p>鹿大生、他大学生問いません！</p>
-          <!-- <p>1人ではできなかったことも</p> -->
-          <p>興味のある方はどなたでも参加可能です！</p>
+
         </div>
       </div>
 
       <div class="left">
-        <div id="left" class="page fadeOutBlur">
+        <div id="left" class="page fadeOutBlur hiddenPage">
           <h1>参加しよう</h1>
           <br>
           <p>下のボタンからメールをお送りください。</p>
           <p>あなたの参加を心待ちにしています。</p>
+          <p>開発案件のご相談も承っております。</p>
           <br>
           <!-- <a href="https://goo.gl/forms/vKMskuYn5ZiHOMZM2"><button class="btn" >参加</button> </a> -->
-          <a href="mailto:k.appdevclub@gmail.com?subject=サークルへの問い合わせ&amp;body=お名前、学部、学年、連絡内容を記載ください。また、差し支えなければ、「SNSアカウント」、「何でサークルを知ったか」も記載いただけると助かります。"><button class="btn" >参加</button></a>
+          <a href="mailto:k.appdevclub@gmail.com?subject=サークルへの問い合わせ&amp;body=大学の方はお名前、学部、学年、連絡内容を記載ください。また、差し支えなければ、「SNSアカウント」、「何でサークルを知ったか」も記載いただけると助かります。"><button class="btn" >参加</button></a>
           <br>
           <br>
           <br>
           <p>Follow Me!!</p>
-          <a href="https://twitter.com/k_appdev"><img style="width:50px;" src="./images/twitter.svg"/> </a>
+          <a href="https://twitter.com/k_appdev"><img style="width:50px;" src="./images/twitter.svg"/></a>
         </div>
       </div>
 
