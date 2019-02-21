@@ -13,13 +13,14 @@ p {
   left: 0;
   z-index: -1;
   width: 102vw;
-  height: 152vh;
+  height: 152vh;//152vh
   background: linear-gradient(to bottom, #719202 0%, #9c1220 100%);
   opacity: 0.8;
   animation: huerotator 15s infinite alternate;
 }
 .page {
   padding-top: 20px;
+  padding-bottom: 50px;
 }
 .nav-arrow {
   width: 30px;
@@ -47,12 +48,16 @@ p {
 }
 .fadeOutBlur {
   opacity: 0.0;
-  -webkit-filter: blur(5px);
+ -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
   -ms-filter: blur(5px);
   filter: blur(5px);
   -webkit-transition:all .5s;
+}
+
+.hiddenPage {
+  display: none;
 }
 
 @mixin ctrl-btn{
@@ -101,10 +106,49 @@ div.back-btn{
 }
 .logo-container {
   display: flex;
-  flex-direction: row;
+  // flex-direction: row;
   justify-content: center;
   align-items: center;
   align-content: space-around;
+}
+.icon-image{
+  width: auto;
+  max-width: 300px;
+  height: auto;
+  max-height: 250px;
+}
+
+.picture-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+}
+.picture-image{
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  margin: 10px;
+  object-fit: cover;
+  object-position: 0 0
+}
+
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10% 0 20%;
+  justify-content: center;
+  align-content: space-around;
+}
+.profile-item-left {
+  width: 30%
+}
+.profile-item-right {
+  width: 60%;
+  padding-left: 10%; 
+  text-align: left;
 }
 
 #canvas-container {

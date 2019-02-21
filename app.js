@@ -27,6 +27,7 @@ const resizeCanvas = function(){
 onload=function(){
   let angle = 0;
   const cube = document.getElementById("cube");
+  const bg   = document.getElementById("bg");
 
   front.el   = document.getElementById("front");
   right.el   = document.getElementById("right");
@@ -63,11 +64,26 @@ onload=function(){
     angle -= 90;
     current.el.classList.remove('fadeInBlur');
     current.el.classList.add('fadeOutBlur');
+    var tmp = current.el
+    setTimeout(function(){
+      tmp.classList.add('hiddenPage');
+    }, 500);
     current = current.next;
+    current.el.classList.remove('hiddenPage');
     current.el.classList.remove('fadeOutBlur');
     current.el.classList.add('fadeInBlur');
     scrollTo( 0,0 );
     cube.style.webkitTransform = "rotateY("+ angle +"deg)";
+    let win_h = window.parent.screen.height;
+    let page_h = current.el.scrollHeight;
+    bg.style.height = win_h > page_h ? win_h+"px" : page_h+"px"; 
+    console.log(bg.style);
+    console.log(document.documentElement.scrollHeight);
+    console.log(current.el.scrollHeight);
+    console.log(current.el.offsetHeight);
+    console.log(bg.style.height);
+    console.log(cube.style.webkitTransform);
+    console.log("test");
   };
 
   document.getElementById("back").onclick = function() {
@@ -75,10 +91,21 @@ onload=function(){
     angle += 90;
     current.el.classList.remove('fadeInBlur');
     current.el.classList.add('fadeOutBlur');
+    var tmp = current.el
+    setTimeout(function(){
+      tmp.classList.add('hiddenPage');
+    }, 500);
     current = current.prev;
+    current.el.classList.remove('hiddenPage');
     current.el.classList.remove('fadeOutBlur');
     current.el.classList.add('fadeInBlur');
     scrollTo( 0,0 );
     cube.style.webkitTransform = "rotateY("+ angle +"deg)";
+    let win_h = window.parent.screen.height;
+    let page_h = current.el.scrollHeight;
+    bg.style.height = win_h > page_h ? win_h+"px" : page_h+"px"; 
+    console.log(document.documentElement.scrollHeight);
+    console.log(bg.style.height);
+    console.log(cube.style.webkitTransform);
   };
 }
