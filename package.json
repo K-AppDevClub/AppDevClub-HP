@@ -19,7 +19,7 @@
   "main": "fiddle.js",
   "dependencies": {
     "shuffle-text": "^0.2.6",
-    "swiper": "^4.5.0"
+    "swiper": "^6.5.1"
   },
   "author": "",
   "license": "ISC",
